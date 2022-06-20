@@ -8,10 +8,10 @@ ul {
 }
 
 button {
-    background-color: rgb(198, 195, 195);
+    background-color: rgb(229, 237, 244);
     color: rgb(41, 41, 41);
     border: 1px solid black;
-    box-shadow: 0px 0px 1px black;
+    box-shadow: 0px 0px 2px black;
     height: 2rem;
     width: 6rem;
     
@@ -23,7 +23,7 @@ button:hover {
 }
 
 /* TEXT */
-.result {
+#result {
     font-size: xx-large;
     font-weight: 600;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

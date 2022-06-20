@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <script src="index.js"></script>
   <div class="game">
-    <span class="result">Select a Play to Begin</span>
+    <span id="result">Select a Play to Begin</span>
     <div class="plays">
       <div class="human">
         <p class="player">
@@ -29,21 +30,20 @@
   </div>
   <ul class="buttons">
     <li>
-      <button id="rock">
+      <button onclick="game('ROCK')">
         ROCK
       </button>
     </li>
     <li>
-      <button id="paper">
+      <button onclick="game('PAPER')">
         PAPER
       </button>
     </li>
     <li>
-      <button id="scissors">
+      <button onclick="game('SCISSORS')">
         SCISSORS
       </button>
     </li>
   </ul>
-<!--   <script src="index.js"></script> -->
 </body>
 </html>
