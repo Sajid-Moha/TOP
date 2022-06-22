@@ -1,0 +1,67 @@
+:root {
+    --paint-color: #000000;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+.canvas {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 0px 0px;
+}
+
+.pixel {
+    background-color: white;
+    padding: 0px 0px 0px 0px;
+}
+
+.pixel:hover {
+    /* must be set to important otherwise dynamically changing pixel color
+    *  to white after reset button is pressed will disable the effect
+    */
+    background-color: var(--paint-color)!important;
+}
+
+.container {
+    width: 500px;
+    padding: .5rem;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset {
+    background-color: whitesmoke;
+    border: 0px;
+    padding: .25rem 2rem;
+    box-shadow: 0rem .2rem rgb(223, 222, 222);
+
+    transition: .2s;
+}
+
+#reset:hover {
+    transform: scale(1.1);
+}
+
+#reset:active {
+    transform: translateY(1px);
+    box-shadow: 0px 0px;
+}
+
+#color-picker {
+    margin-left: 2rem;
+}
