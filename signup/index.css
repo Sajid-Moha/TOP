@@ -1,0 +1,80 @@
+:root {
+    --light-grey: rgb(239, 236, 236);
+
+    --bright-green: green;
+    --dark-green: rgb(1, 78, 1);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    width: 30vw;
+    height: 100vh;
+    /* fallback color */
+    background-color: var(--light-grey);
+
+    background-image: url("paint.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.branding {
+    margin-top: auto;
+    color: white;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, .5);
+    
+    width: 100%;
+    padding: 2em 0em;
+}
+
+.forms {
+    width: 70vw;
+}
+
+fieldset {
+    height: 40vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-pair {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-right: 20vw;
+}
+
+.item > * {
+    display: block;
+}
+
+.submit {
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: none;
+
+    margin: .25em .25em;
+
+    color: white;
+    background-color: var(--bright-green);
+    box-shadow: 0px 2px var(--dark-green);
+
+    transition: .2s;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+}
+
+.submit:active {
+    transform: translateY(2px);
+    box-shadow: 0px 0px;
+}
