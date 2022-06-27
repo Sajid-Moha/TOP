@@ -1,19 +1,38 @@
 :root {
+    /* site background color */
     --light-grey: rgb(239, 236, 236);
 
+    /* submit button colors */
     --bright-green: green;
     --dark-green: rgb(1, 78, 1);
+
+    /* TEXT COLORS */
+    --off-black: rgb(30, 29, 29);
+    --grey-text: rgb(75, 75, 75);
+    --placeholder-color: rgb(247, 247, 247);
+
+    font-family: sans-serif;
 }
 
+/* split site into a left column and right column */
 main {
     display: flex;
     flex-direction: row;
+
+    color: var(--off-black);
 }
+
+/*
+*
+* LEFT SIDE OF SCREEN
+*
+*/
 
 .image {
     width: 30vw;
     height: 100vh;
-    /* fallback color */
+
+    /* fallback background color */
     background-color: var(--light-grey);
 
     background-image: url("paint.jpg");
@@ -21,47 +40,88 @@ main {
     background-repeat: no-repeat;
 }
 
+/* transparent black bar for
+    logo & brand name */
 .branding {
-    margin-top: auto;
+    height: 15vh;
+    margin-top: 21vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     color: white;
-    text-align: center;
+    font-size: xx-large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: .1em;
 
     background-color: rgba(0, 0, 0, .5);
     
     width: 100%;
-    padding: 2em 0em;
 }
+
+/*
+*
+* RIGHT SIDE OF SCREEN
+*
+*/
 
 .forms {
     width: 70vw;
 }
 
+.site-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    height: 35vh;
+
+    font-size: large;
+    font-weight: 600;
+}
+
 fieldset {
-    height: 40vh;
+    height: 30vh;
+    border: none;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    box-shadow: 0px .25em .25em var(--light-grey), 0px -.25em .25em var(--light-grey);
+}
+
+fieldset > legend {
+    transform: translateY(1em);
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+    font-weight: 600;
+    font-size: large;
 }
 
 .form-pair {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: var(--grey-text);
 
     margin-right: 20vw;
 }
 
+/* want input label to be placed above text field */
 .item > * {
     display: block;
 }
 
 .submit {
-    padding: .5em 1em;
+    padding: .5em 1.5em;
     border-radius: .5em;
     border: none;
 
-    margin: .25em .25em;
+    margin: .25em 3em;
+    margin-top: 2em;
 
     color: white;
     background-color: var(--bright-green);
@@ -77,4 +137,20 @@ fieldset {
 .submit:active {
     transform: translateY(2px);
     box-shadow: 0px 0px;
+}
+
+input {
+    border: none;
+    border-radius: .1em;
+    background-color: var(--placeholder-color);
+
+    box-shadow: .1em .1em var(--light-grey);
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
 }
