@@ -1,7 +1,32 @@
 :root {
     --site-background: rgb(231, 231, 254);
+    --nav-background: black;
+
+    --nav-text: rgb(228, 225, 225);
 }
 
 body {
     background-color: var(--site-background);
+}
+
+.sidebar {
+    list-style: none;
+    font-size: 5em;
+
+    background-color: var(--nav-background);
+    color: var(--nav-text);
+}
+
+.sidebar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.branding {
+    height: 10%;
+}
+
+.logo {
+    aspect-ratio: 1;
+    height: 20em;
 }
