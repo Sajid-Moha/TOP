@@ -8,54 +8,65 @@
 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="normalize.css">
+
+    <script src="https://kit.fontawesome.com/ce2465d2cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="sidebar">
         <div class="branding"><img class="logo" src="myLogo.png">Dashboard</div>
         <ul class="site-nav">
-            <li class="nav-item"><a href="#">[ICON] Home</a></li>
-            <li class="nav-item"><a href="#">[ICON] Profile</a></li>
-            <li class="nav-item"><a href="#">[ICON] Message</a></li>
-            <li class="nav-item"><a href="#">[ICON] History</a></li>
-            <li class="nav-item"><a href="#">[ICON] Tasks</a></li>
-            <li class="nav-item"><a href="#">[ICON] Communities</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-house-user"></i> Home</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-comments"></i> Message</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-clock-rotate-left"></i> History</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-list-check"></i> Tasks</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-people-group"></i> Communities</a></li>
         </ul>
         <ul class="admin-nav">
-            <li class="nav-item"><a href="#">[ICON] Setting</a></li>
-            <li class="nav-item"><a href="#">[ICON] Support</a></li>
-            <li class="nav-item"><a href="#">[ICON] Privacy</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-gears"></i> Setting</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-circle-question"></i> Support</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-scroll"></i> Privacy</a></li>
         </ul>
     </nav>
-    <header>
-        <div class="header-top">
-            <form action="#" method="GET">
-                <button type="submit" id="search-button">[ICON]</button>
-                <input type="search" id="site-search">
-            </form>
-            <button type="button" id="notification-toggle">[ICON]</button>
-            <div class="user-profile">
-                <div class="profile-picture">[IMAGE]</div>
+    <div class="right-side">
+        <header>
+            <div class="header-top">
+                <form action="#" method="GET">
+                    <button type="submit" class="clear-but" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="search" id="site-search">
+                </form>
+                <button type="button" class="clear-but" id="notification-toggle"><i class="fa-solid fa-bell"></i></button>
+                <img class="profile-picture" src="myLogo.png"></img>
                 <span id="username">Sajid Mohammad</span>
             </div>
-        </div>
-        <div class="header-bottom">
-            <div class="profile-picture large-pfp">[IMAGE]</div>
-            <div class="welcome">
-                <p>Hi there,</p>
-                <p>Sajid Mohammad (@Sajid)</p>
+            <div class="header-bottom">
+                <img class="profile-picture large-pfp" src="myLogo.png"></img>
+                <span class="welcome">
+                    <p>Hi there,</p>
+                    <p>Sajid Mohammad (@Sajid)</p>
+                </span>
+                <div class="actions">
+                    <button type="button" class="action">
+                        New
+                    </button>
+                    <button type="button" class="action">
+                        Upload
+                    </button>
+                    <button type="button" class="action">
+                        Share
+                    </button>
+                </div>
             </div>
-            <div class="actions">
-                <button type="button" class="action">
-                    New
-                </button>
-                <button type="button" class="action">
-                    Upload
-                </button>
-                <button type="button" class="action">
-                    Share
-                </button>
+        </header>
+        <main>
+            <div class="my-projects">
             </div>
-        </div>
-    </header>
+            <div class="announcements">
+            </div>
+            <div class="trending">
+        
+            </div>
+        </main>
+    </div>
 </body>
 </html>
