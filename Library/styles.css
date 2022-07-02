@@ -1,0 +1,33 @@
+body {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
+}
+
+heading {
+    background-color: aqua;
+    height: 20vh;
+}
+
+main {
+    background-color: antiquewhite;
+}
+
+.library {
+    background-color: yellow;
+    height: 100%;
+    width: 70%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: .5em;
+}
+
+.book {
+    background-color: blue;
+    aspect-ratio: 1;
+}
