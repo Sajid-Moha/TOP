@@ -95,6 +95,7 @@ header {
 
 .header-top, .header-bottom {
     margin-left: 5%;
+    margin-right: 5%;
     margin-top: .5em;
     margin-bottom: .5em;
 }
@@ -173,5 +174,5 @@ button:hover {
     border-radius: 2em;
 
     border: none;
-    padding: .3em .7em;
+    padding: .3em 1em;
 }
