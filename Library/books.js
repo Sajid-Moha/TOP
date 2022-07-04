@@ -42,19 +42,29 @@ function addBookToLibrary(title, author, numPages, read) {
 
 function printBooks() {
     let library = document.querySelector(".library");
+
+    while (library.firstChild) {
+        library.removeChild(library.firstChild);
+    }
+    
     myLibrary.forEach( function (book) {
         library.appendChild(book.returnBook());
     })
 }
 
-
-addBookToLibrary('GENH', 'Seuss', 25, false);
-addBookToLibrary('DOAWK', 'Bron', 23, true);
-addBookToLibrary('Draymond', 'Green', 23, false);
-addBookToLibrary('Stephen', 'Curry lorem epsum dsaf dfaslfhda dfsahl;fdhasl dfsalhflkadsjfkldjsa dfsalhfdksajhfdkl asfdsakjh fdsakjhf dkjasda fkdha fkdh asdlkfdhsafk hsadkjfh adkjflh dsakjhf alkjsdhf daksjhfkdsahfkdjs alhfjkdashlfkdsahs', 30, true);
-addBookToLibrary('Klay', 'Thompson', 11, false);
-addBookToLibrary('Klay', 'Thompson', 11, false);
-addBookToLibrary('Klay', 'Thompson', 11, false);
-addBookToLibrary('Klay', 'Thompson', 11, false);
 printBooks();
 
+
+
+function create_card () {
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const numPages = document.getElementById('num-pages').value;
+    
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
+    document.getElementById('num-pages').value = '';
+
+    addBookToLibrary(title, author, numPages, true);
+    printBooks();
+}
