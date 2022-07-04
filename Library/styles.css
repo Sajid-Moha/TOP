@@ -45,6 +45,17 @@ main {
     padding: 2em;
 }   
 
+@media (max-width: 950px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .add {
+        margin-bottom: 2em;
+    }
+}
+
 .library-container {
     box-sizing: border-box;
 
@@ -123,18 +134,12 @@ button {
 }
 
 .form-submit:hover, .form-submit:focus {
-    transform: scale(1.1);
     background-color: inherit;
     border: 2px solid grey;
 }
 
 .form-submit:active {
     border: 2px solid black;
-}
-
-/* hide modal when not needed */
-.hidden {
-    visibility: hidden;
 }
 
 .form {
@@ -163,9 +168,15 @@ button {
 
 .modal {
     z-index: 1;
-    display: none;
+    display: none; /* modal hidden until needed */
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 50%);
+
+    box-sizing: content-box;
+}
+
+#title, #author, #num-pages {
+    margin-bottom: 2em;
 }
