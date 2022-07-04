@@ -1,25 +1,62 @@
+/* Color palette used:
+    https://colorhunt.co/palette/ffd369e26241940a375b0909
+*/
+:root {
+    --main-body: #FFD369;
+    --heading-color: #940A37;
+    --accent: #E26241;
+    --dark-shadow: #5B0909;
+}
+
 body {
     min-height: 100vh;
+    background-color: var(--main-body);
+
+    color: var(--dark-shadow);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     display: grid;
     grid-template-rows: auto 1fr;
     box-sizing: border-box;
 }
 
-heading {
-    background-color: aqua;
-    height: 20vh;
+/* Add to body when modal is active */
+.locked {
+    position: fixed;
+}
+
+header {
+    background-color: var(--heading-color);
+    color: var(--main-body);
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    text-align: center;
+    font-size: x-large;
 }
 
 main {
-    background-color: antiquewhite;
+    color: black;
+    font-weight: bolder;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+}   
+
+.library-container {
+    box-sizing: border-box;
+
+    height: 100%;
+    width: 80%;
+
+    border: .5em solid var(--dark-shadow);
 }
 
 .library {
-    background-color: yellow;
+    background-color: var(--dark-shadow);
     height: 100%;
-    width: 70%;
-    margin: auto;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -28,6 +65,102 @@ main {
 }
 
 .book {
-    background-color: blue;
+    background-color: var(--accent);
     aspect-ratio: 1;
+
+    text-align: center;
+}
+
+.book > p {
+    padding-bottom: .5em;
+    border-bottom: 2px solid black;
+}
+
+footer {
+    background-color: var(--heading-color);
+    margin-top: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+
+    color: var(--main-body);
+    text-align: right;
+}
+
+/* BUTTON STYLING */
+button {
+    cursor: pointer;
+    border-radius: 1em;
+    border: none;
+
+    transition: .2s;
+}
+
+/* have to add hover and active effects seperately or else animation messes up */
+.add {
+    padding: 1.5em 3em;
+    background-color: var(--accent);
+    box-shadow: 0px 3px var(--dark-shadow);
+}
+
+.add:hover {
+    transform: scale(1.1);
+}
+
+.add:active {
+    transform: translateY(3px);
+    box-shadow: 0px 0px;
+}
+
+.spacing {
+    height: 2em;
+}
+
+.form-submit {
+    padding: .5em 1em;
+
+    background-color: grey;
+}
+
+.form-submit:hover, .form-submit:focus {
+    transform: scale(1.1);
+    background-color: inherit;
+    border: 2px solid grey;
+}
+
+.form-submit:active {
+    border: 2px solid black;
+}
+
+.modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+/* hide modal when not needed */
+.hidden {
+    visibility: hidden;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 3em;
+
+    width: 50%;
+    background-color: whitesmoke;
+    padding: 2em;
+}
+
+.modal-close {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    
+    color: red;
+    font-weight: bolder;
 }

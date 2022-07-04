@@ -9,33 +9,43 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="normalize.css">
 </head>
-<body>
-    <heading>
+<body class="">
+    <div class="modal">
+        <button type="button" id="close" class="modal-close">X</button>
+        <form class="form" method="GET">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" name="title" class="book-form">
+            
+            <label for="author">Book Author</label>
+            <input type="text" id="author" name="author" class="book-form">
 
-    </heading>
+            <label for="num-pages">Book Length</label>
+            <input type="number" id="num-pages" name="num-pages" class="book-form">
+
+            <label for="read">Book Read?</label>
+            <input type="checkbox" id="read" name="read" class="book-form" checked>
+
+            <!-- adding margin to button ruins animation, use empty div instead -->
+            <div class="spacing"></div>
+            <button type="submit" class="form-submit">Add Book</button>
+        </form>
+    </div>
+    <header>
+        MY LIBRARY - SIMPLE
+    </header>
     <main>
-        <div class="library">
-            <div class="book">Hello</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">World</div>
-            <div class="book">Hello</div>
-            <div class="book">Hello</div>
-            <div class="book">Hello</div>
-            <div class="book">Hello</div>
-            <div class="book">Hello</div>
+        <div class="library-container">
+            <div class="library">
+            </div>
+        </div>
+        <div class="controls">
+            <button type="button" class="add">Add Book</button>
         </div>
     </main>
+    <footer>
+        Sajid Mohammad, The Odin Project
+    </footer>
     <script src="books.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
