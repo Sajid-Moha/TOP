@@ -153,6 +153,9 @@ button {
     position: absolute;
     right: 5%;
     top: 5%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    text-align: center;
     
     color: red;
     font-weight: bolder;
