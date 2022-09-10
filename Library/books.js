@@ -23,14 +23,18 @@ Book.prototype.returnBook = function () {
     const title = document.createElement('p');
     const author = document.createElement('p');
     const numPages = document.createElement('p');
+    const read = document.createElement('p');
     
     title.textContent = `${this.title}`;
     author.textContent = `${this.author}`;
-    numPages.textContent = `${this.numPages}`;
+    numPages.textContent = `${this.pages}`;
+    
+    read.textContent = this.read ? "Read = True" : "Read = False";
 
     book.appendChild(title);
     book.appendChild(author);
     book.appendChild(numPages);
+    book.appendChild(read);
 
     return book;
 };
@@ -60,11 +64,14 @@ function create_card () {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const numPages = document.getElementById('num-pages').value;
+    const read = document.getElementById('read').checked;
     
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
     document.getElementById('num-pages').value = '';
+    document.getElementById('read').checked = true;
 
-    addBookToLibrary(title, author, numPages, true);
+    addBookToLibrary("Title: " + title, "Author: " + author, "Length: " + numPages.toString() + " Pages", read);
+    console.log(numPages.toString());
     printBooks();
 }
