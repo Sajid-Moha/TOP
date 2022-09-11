@@ -14,6 +14,13 @@
     font-family: sans-serif;
 }
 
+body {
+    width: 100%;
+
+    /* grid lets body fill entire view width */
+    display: grid;
+}
+
 /* split site into a left column and right column */
 main {
     display: flex;
@@ -31,13 +38,13 @@ main {
 .image {
     width: 30vw;
     height: 100vh;
+    position: sticky;
 
     /* fallback background color */
     background-color: var(--light-grey);
 
-    background-image: url("paint.jpg");
+    background-image: url("gray_bg.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* transparent black bar for
@@ -53,7 +60,7 @@ main {
     color: white;
     font-size: xx-large;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
 
     background-color: rgba(0, 0, 0, .5);
     
@@ -70,6 +77,11 @@ main {
     width: 70vw;
 }
 
+.forms > * {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 .site-description {
     display: flex;
     flex-direction: column;
@@ -79,6 +91,7 @@ main {
 
     font-size: large;
     font-weight: 600;
+    text-align: center;
 }
 
 fieldset {
@@ -120,7 +133,7 @@ fieldset > legend {
     border-radius: .5em;
     border: none;
 
-    margin: .25em 3em;
+    margin: auto;
     margin-top: 2em;
 
     color: white;
@@ -153,4 +166,47 @@ input:valid {
 
 input:invalid {
     border-color: red;
+}
+
+#login-prompt {
+    text-align: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+}
+
+/* At 900px, get rid of two column design */
+/* Also line input fields vertically */
+@media (max-width: 945px) {
+    .image {
+        display: none;
+    }
+
+    .forms {
+        width: 100%;
+    }
+
+    fieldset {
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+
+    .form-pair {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 0em;
+
+        gap: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+/* At small screen sizes the legend blocks content */
+@media (max-width: 500px) {
+    legend {
+        display: none;
+    }
 }
